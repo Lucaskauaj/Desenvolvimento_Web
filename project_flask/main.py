@@ -7,16 +7,13 @@ def index():
        return render_template('index.html')
 
 @app.route('/usuario/<usuario>')
-def usuario(nome):
-       return nome
+def usuario(usuario):
+       return render_template('usuario.html')
 
 @app.route('/contatos')
-def index():
-       return render_template('contatos.html',
-       nome="lucas",
-       email="adm.adm@gmail.com")
-def index():
-       return 'Olá Mundo!'
+def contatos():
+       return render_template('contatos.html')
+
 
 if __name__ == '__main__':
        app.run(debug=True)
