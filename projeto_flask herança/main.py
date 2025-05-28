@@ -6,10 +6,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/primeiro')
-def primeiro():
-    return render_template('primeiro.html')
-
 @app.route('/segundo')
 def segundo():
     return render_template('segundo.html')

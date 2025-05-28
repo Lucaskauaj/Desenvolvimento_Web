@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Formulário Simples</title>
-</head>
-<body>
-  <h2>Formulário de Cadastro</h2>
-  <form action="{{url_for('recebedados')}}" method="GET">
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" required><br><br>
+{% extends "primeiro.html" %}
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="telefone">Telefone:</label><br>
-    <input type="tel" id="telefone" name="telefone" required pattern="\d{10,11}" placeholder="Apenas números"><br><br>
-
-    <label for="idade">Idade:</label><br>
-    <input type="number" id="idade" name="idade" required min="0"><br><br>
-
-    <button type="submit">Enviar</button>
-  </form>
-</body>
-</html>
+{% block conteudo %}
+	<h1>Bem vindo à Pizza Nossa!</h1>
+  <ul>
+		<li> Frango com Catupiry | P: R$ 35,00 | M: R$ 45,00 | G: R$ 55,00 </li>
+		<li> Sertaneja | P: R$ 40,00 | M: R$ 50,00 | G: R$ 60,00 </li>
+	</ul>
+{% endblock %}
